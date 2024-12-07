@@ -24,7 +24,7 @@ public class RobotContainer {
   // The robot's subsystems and commands are defined here...
   private final Drivetrain dt = new Drivetrain();
 
-  private final PhotonCamera cam = new PhotonCamera("camera");
+  private final PhotonCamera cam = new PhotonCamera("targeting");
   private final Vision vision = new Vision(cam);
 
   // Replace with CommandPS4Controller or CommandJoystick if needed

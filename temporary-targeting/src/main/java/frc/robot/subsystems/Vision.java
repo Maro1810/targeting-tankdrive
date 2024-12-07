@@ -24,11 +24,9 @@ public class Vision extends SubsystemBase{
 
     //returns whether a target (AprilTag) has been detected
     public boolean targetDetected() {
-        List<PhotonPipelineResult> results = camera.getAllUnreadResults();
-        for (PhotonPipelineResult result : results) {
-            if (result.hasTargets()) {
-                return true;
-            }
+        PhotonPipelineResult result = camera.getLatestResult();
+        if (result.hasTargets()) {
+            return true;
         }
         return false;
     }
